@@ -434,7 +434,7 @@ footer{background:var(--panel);padding:24px 40px;border-top:1px solid var(--rule
         <li>Pay by EFT or credit card via PayFast</li>
       </ul>
     </div>
-    <form class="quote-form" onsubmit="return false">
+    <form class="quote-form" action="https://formspree.io/f/xpqekkdk" method="POST">
       <div class="form-row">
         <div class="form-group">
           <label class="form-label">Your Name</label>
@@ -442,12 +442,12 @@ footer{background:var(--panel);padding:24px 40px;border-top:1px solid var(--rule
         </div>
         <div class="form-group">
           <label class="form-label">Phone</label>
-          <input type="tel" class="form-input" placeholder="082 000 0000">
+          <input type="tel" class="form-input" name="phone" placeholder="082 000 0000">
         </div>
       </div>
       <div class="form-group">
         <label class="form-label">Email</label>
-        <input type="email" class="form-input" placeholder="your@email.com">
+        <input type="email" class="form-input" name="email" placeholder="your@email.com">
       </div>
       <div class="form-row">
         <div class="form-group">
@@ -466,7 +466,7 @@ footer{background:var(--panel);padding:24px 40px;border-top:1px solid var(--rule
         </div>
         <div class="form-group">
           <label class="form-label">Year & Model</label>
-          <input type="text" class="form-input" placeholder="e.g. 1978 BMW R80">
+          <input type="text" class="form-input" name="model" placeholder="e.g. 1978 BMW R80">
         </div>
       </div>
       <div class="form-group">
@@ -482,9 +482,11 @@ footer{background:var(--panel);padding:24px 40px;border-top:1px solid var(--rule
       </div>
       <div class="form-group">
         <label class="form-label">Tell Us More</label>
-        <textarea class="form-textarea" placeholder="Describe your vision, any specific parts you have, your budget range, and where you're based..."></textarea>
+        <textarea class="form-textarea" name="message" placeholder="Describe your vision, any specific parts you have, your budget range, and where you're based..."></textarea>
       </div>
       <button type="submit" class="form-submit">Send Quote Request</button>
+      <input type="hidden" name="_subject" value="New Quote Request - Tonys Cafe Racers">
+      <input type="hidden" name="_next" value="https://tonyscafe-theta.vercel.app/#quote">
       <p class="form-note">We'll respond within 48 hours. No spam, ever.</p>
     </form>
   </div>

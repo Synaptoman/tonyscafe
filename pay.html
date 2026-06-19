@@ -107,8 +107,8 @@ footer{background:var(--panel);padding:20px 40px;border-top:1px solid var(--rule
 
       <!-- PayFast form - replace MERCHANT_ID and MERCHANT_KEY when account is live -->
       <form id="payfast_form" action="https://www.payfast.co.za/eng/process" method="POST">
-        <input type="hidden" name="merchant_id" value="MERCHANT_ID_HERE">
-        <input type="hidden" name="merchant_key" value="MERCHANT_KEY_HERE">
+        <input type="hidden" name="merchant_id" value="35729203">
+        <input type="hidden" name="merchant_key" value="ifanwt46yjvqt">
         <input type="hidden" name="return_url" value="https://tonyscafe.co.za/pay-success.html">
         <input type="hidden" name="cancel_url" value="https://tonyscafe.co.za/pay.html">
         <input type="hidden" name="notify_url" value="https://tonyscafe.co.za/notify">
@@ -167,7 +167,7 @@ function submitPayment() {
 
   // Check merchant credentials are set
   var merchantId = document.querySelector('[name="merchant_id"]').value;
-  if (merchantId === 'MERCHANT_ID_HERE') {
+  if (merchantId === '35729203') {
     alert('Payment system is being configured. Please contact luke@tonyscafe.co.za to arrange payment.');
     return;
   }

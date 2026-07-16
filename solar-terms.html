@@ -1,1 +1,188 @@
-placeholder
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solar Cleaning Terms & Indemnity — Tony's Cafe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --black:#0D0D0D;--panel:#1A1A1A;--card:#222222;--cream:#F5F0E8;
+  --brass:#C8A96E;--brass-dim:rgba(200,169,110,0.15);--grey:#8B8B8B;
+  --light:#BEBEBE;--rule:rgba(200,169,110,0.25);--red:#C8292B;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Lora',serif;color:var(--cream);background:var(--black);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(13,13,13,0.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule);padding:0 40px;height:60px;display:flex;align-items:center;justify-content:space-between}
+.nav-brand{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:0.12em;color:var(--cream);text-decoration:none}
+.nav-brand span{color:var(--brass)}
+.nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+.nav-links a{font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey);text-decoration:none;transition:color 0.2s}
+.nav-links a:hover{color:var(--brass)}
+.nav-cta{font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;background:var(--brass);color:var(--black);padding:8px 20px;text-decoration:none;transition:background 0.2s;white-space:nowrap}
+.nav-cta:hover{background:var(--cream)}
+.nav-ghost{font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--brass);border:1px solid var(--brass);padding:8px 16px;text-decoration:none;transition:all 0.2s;white-space:nowrap}
+.nav-ghost:hover{background:var(--brass);color:var(--black)}
+footer{background:var(--panel);padding:24px 40px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-brand{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:0.1em;color:var(--cream)}
+.footer-brand span{color:var(--brass)}
+.footer-links{display:flex;gap:24px;flex-wrap:wrap}
+.footer-links a{font-family:'Inter',sans-serif;font-size:11px;color:var(--grey);text-decoration:none;transition:color 0.2s}
+.footer-links a:hover{color:var(--brass)}
+.footer-copy{font-family:'Inter',sans-serif;font-size:11px;color:var(--grey)}
+.form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+.form-label{font-family:'Inter',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--brass)}
+.form-input,.form-select,.form-textarea{background:var(--card);border:1px solid rgba(245,240,232,0.1);color:var(--cream);font-family:'Inter',sans-serif;font-size:14px;font-weight:300;padding:12px 16px;outline:none;transition:border-color 0.2s;-webkit-appearance:none;width:100%}
+.form-input::placeholder,.form-textarea::placeholder{color:var(--grey)}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--brass)}
+.form-select option{background:var(--card)}
+.form-textarea{resize:vertical;min-height:100px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.btn-primary{font-family:'Inter',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;background:var(--brass);color:var(--black);border:none;padding:14px 32px;cursor:pointer;transition:background 0.2s;text-decoration:none;display:inline-block}
+.btn-primary:hover{background:var(--cream)}
+.btn-ghost-btn{font-family:'Inter',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--cream);border:1px solid rgba(245,240,232,0.3);padding:14px 32px;text-decoration:none;transition:all 0.2s;display:inline-block}
+.btn-ghost-btn:hover{border-color:var(--brass);color:var(--brass)}
+.section-stamp{font-family:'Inter',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.3em;text-transform:uppercase;color:var(--brass);margin-bottom:16px;display:flex;align-items:center;gap:12px}
+.section-stamp::before{content:'////';letter-spacing:0.1em;opacity:0.6}
+.section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,6vw,80px);letter-spacing:0.06em;color:var(--cream);line-height:1;margin-bottom:16px}
+.brass-rule{width:48px;height:2px;background:var(--brass);margin-bottom:48px}
+.highlight-box{background:var(--panel);border-left:3px solid var(--brass);padding:20px 24px;margin:20px 0}
+.highlight-box p{font-family:'Inter',sans-serif;font-size:14px;font-weight:300;line-height:1.75;color:var(--light);margin:0}
+@media(max-width:900px){
+  nav{padding:0 20px}
+  .nav-links{display:none}
+  footer{flex-direction:column;text-align:center;padding:20px}
+  .footer-links{justify-content:center}
+  .form-row{grid-template-columns:1fr}
+}
+
+nav .nav-back{font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey);text-decoration:none;transition:color 0.2s}
+nav .nav-back:hover{color:var(--brass)}
+main{max-width:800px;margin:0 auto;padding:100px 40px 80px}
+.page-stamp{font-family:'Inter',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.3em;text-transform:uppercase;color:var(--red);margin-bottom:16px;display:flex;align-items:center;gap:12px}
+.page-stamp::before{content:'////';opacity:0.6}
+h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,8vw,80px);letter-spacing:0.06em;color:var(--cream);line-height:1;margin-bottom:8px}
+.updated{font-family:'Inter',sans-serif;font-size:12px;color:var(--grey);margin-bottom:40px}
+.brass-rule{width:48px;height:2px;background:var(--red);margin-bottom:40px}
+.warning-box{background:rgba(200,41,43,0.1);border:1px solid var(--red);padding:24px 28px;margin-bottom:40px}
+.warning-box p{font-family:'Inter',sans-serif;font-size:15px;font-weight:400;line-height:1.75;color:var(--cream);margin:0}
+.warning-box strong{color:var(--red)}
+h2{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:0.08em;color:var(--cream);margin-bottom:12px;margin-top:40px}
+h2 .num{color:var(--brass)}
+p{font-size:15px;line-height:1.85;color:var(--light);margin-bottom:14px;font-family:'Inter',sans-serif;font-weight:300}
+ul{margin:0 0 16px 0;padding:0;list-style:none}
+ul li{font-family:'Inter',sans-serif;font-size:14px;font-weight:300;line-height:1.8;color:var(--light);padding-left:20px;position:relative;margin-bottom:8px}
+ul li::before{content:'—';position:absolute;left:0;color:var(--brass)}
+.divider{border:none;border-top:1px solid var(--rule);margin:32px 0}
+.contact-block{background:var(--panel);border:1px solid var(--rule);padding:24px 28px;margin-top:40px}
+.contact-block p{margin-bottom:6px;font-size:14px}
+.contact-block a{color:var(--brass);text-decoration:none}
+@media(max-width:700px){main{padding:80px 20px 60px}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-brand">TONY'S <span>CAFE</span></a>
+  <a href="/solar.html" class="nav-back">← Solar Cleaning</a>
+</nav>
+<main>
+  <p class="page-stamp">Legal &mdash; Solar Cleaning</p>
+  <h1>SOLAR CLEANING<br>TERMS &amp;<br>INDEMNITY</h1>
+  <p class="updated">Last updated: July 2026</p>
+  <div class="brass-rule"></div>
+
+  <div class="warning-box">
+    <p><strong>Important Notice:</strong> By requesting a quote, accepting a booking or making payment for Tony's Cafe Solar Cleaning services, you confirm that you have read, understood and accepted these Terms and Indemnity in full. <strong>Tony's Cafe Solar Cleaning accepts no liability for any damage to solar panels, mounting systems, roofing, waterproofing or any other property</strong>, whether arising from the cleaning service or otherwise.</p>
+  </div>
+
+  <h2><span class="num">1.</span> About This Service</h2>
+  <p>Tony's Cafe Solar Cleaning is a service provided by Luke Cuthbert t/a Tony's Cafe, Cape Town, South Africa. We provide residential solar panel cleaning using deionised water and soft-bristle poles for single and double-storey properties within the Cape Town area.</p>
+  <p>Contact: <a href="mailto:luke@tonyscafe.co.za" style="color:var(--brass)">luke@tonyscafe.co.za</a></p>
+
+  <hr class="divider">
+
+  <h2><span class="num">2.</span> Scope of Service</h2>
+  <p>Our service includes the external cleaning of solar photovoltaic panels using deionised water and industry-standard soft-bristle cleaning equipment. Our service does not include:</p>
+  <ul>
+    <li>Inspection, testing or electrical assessment of the solar system</li>
+    <li>Cleaning of inverters, wiring, mounting hardware or any component other than the panel glass surface</li>
+    <li>Repair of any pre-existing damage, cracks, delamination or defects</li>
+    <li>Internal panel cleaning or any process requiring panel removal</li>
+    <li>Roof repairs, waterproofing or structural work</li>
+  </ul>
+
+  <hr class="divider">
+
+  <h2><span class="num">3.</span> Client Responsibilities &amp; Pre-Existing Conditions</h2>
+  <p>The client accepts full responsibility for:</p>
+  <ul>
+    <li>Ensuring that all solar panels, mounting systems and roof structures are in sound condition prior to the cleaning service</li>
+    <li>Disclosing any known defects, cracks, loose mountings, leaks or damage before the service is performed</li>
+    <li>Ensuring that access to the property and panels is safe and legally permitted</li>
+    <li>Ensuring that the solar system is switched off or in a safe state for cleaning as required by the inverter manufacturer</li>
+    <li>Providing access to a water tap within a reasonable distance of the panels</li>
+  </ul>
+  <p>Tony's Cafe Solar Cleaning reserves the right to refuse or stop any cleaning job where conditions are deemed unsafe or where pre-existing damage is observed that could be worsened by cleaning. In such cases a call-out fee may apply.</p>
+
+  <hr class="divider">
+
+  <h2><span class="num">4.</span> Indemnity &amp; Limitation of Liability</h2>
+  <div class="warning-box">
+    <p><strong>The client irrevocably indemnifies Tony's Cafe Solar Cleaning, its employees, contractors and agents against any and all claims, losses, damages, costs or expenses</strong> of whatsoever nature arising directly or indirectly from the provision of the solar cleaning service, including but not limited to:</p>
+  </div>
+  <ul>
+    <li><strong>Damage to solar panels</strong> — including cracking, delamination, scratching or any other physical damage, whether visible or latent, whether caused by the cleaning process or attributable to pre-existing conditions</li>
+    <li><strong>Water ingress and leakage</strong> — including any water entering the roof structure, ceiling, electrical components or interior of the property during or after the cleaning service</li>
+    <li><strong>Electrical damage</strong> — including any damage to inverters, wiring, connections, batteries or associated electrical infrastructure</li>
+    <li><strong>Roof and structural damage</strong> — including any damage to tiles, sheeting, waterproofing membrane, gutters or fascia boards</li>
+    <li><strong>Production loss</strong> — including any reduction in solar output or system performance following the cleaning service</li>
+    <li><strong>Consequential loss</strong> — including any indirect financial loss, loss of electricity production value, or any other consequential damage of any nature</li>
+    <li><strong>Panel warranty</strong> — the client acknowledges that professional cleaning using deionised water and soft brushes is generally manufacturer-approved, but accepts sole responsibility for verifying their specific panel warranty terms before proceeding</li>
+  </ul>
+  <p>Tony's Cafe Solar Cleaning carries out all work with reasonable care and in accordance with industry best practice. However, solar panels are fragile precision instruments. Pre-existing hairline cracks, delamination, loose frames, compromised seals or manufacturing defects may not be visible prior to cleaning and may become apparent or worsen during the process. <strong>We cannot accept liability for such outcomes.</strong></p>
+  <p>Our maximum liability in any circumstances is limited to a refund of the amount paid for the specific cleaning service in question. We accept no liability beyond this amount under any circumstances.</p>
+
+  <hr class="divider">
+
+  <h2><span class="num">5.</span> Payment Terms</h2>
+  <ul>
+    <li>A deposit of 50% of the quoted amount is required to confirm a booking</li>
+    <li>The balance is due on completion of the clean, before we leave the property</li>
+    <li>Payments are processed via PayFast — credit card, debit card or EFT accepted</li>
+    <li>Cancellations with less than 24 hours notice will forfeit the deposit</li>
+    <li>If we arrive and are unable to complete the clean due to conditions not disclosed at the time of quoting, a call-out fee of R350 applies</li>
+  </ul>
+
+  <hr class="divider">
+
+  <h2><span class="num">6.</span> Cancellation &amp; Refunds</h2>
+  <ul>
+    <li><strong>Cancellation before 24 hours:</strong> Full deposit refund</li>
+    <li><strong>Cancellation within 24 hours:</strong> Deposit forfeited</li>
+    <li><strong>Unable to clean on arrival:</strong> R350 call-out fee applies, deposit refunded less call-out fee</li>
+    <li><strong>Incomplete clean due to safety concerns:</strong> Work completed to date will be invoiced pro-rata</li>
+    <li><strong>No refund</strong> will be issued once the cleaning service has been completed</li>
+  </ul>
+
+  <hr class="divider">
+
+  <h2><span class="num">7.</span> Dispute Resolution</h2>
+  <p>Any complaint must be submitted in writing to <a href="mailto:luke@tonyscafe.co.za" style="color:var(--brass)">luke@tonyscafe.co.za</a> within 48 hours of the cleaning service being completed. We will assess the complaint fairly and respond within 5 business days. These terms are governed by the laws of the Republic of South Africa.</p>
+
+  <div class="contact-block">
+    <p><strong style="color:var(--brass)">Tony's Cafe Solar Cleaning</strong></p>
+    <p>Luke Cuthbert t/a Tony's Cafe — Cape Town, South Africa</p>
+    <p>Email: <a href="mailto:luke@tonyscafe.co.za">luke@tonyscafe.co.za</a></p>
+    <p>Website: <a href="https://tonyscafe.co.za/solar.html">tonyscafe.co.za/solar.html</a></p>
+  </div>
+</main>
+<footer>
+  <span class="footer-brand">TONY'S <span>CAFE</span></span>
+  <div class="footer-links"><a href="/">Tony's Cafe</a><a href="/solar.html">Solar Cleaning</a><a href="/terms.html">General Terms</a></div>
+  <p class="footer-copy">&copy; 2026 Tony's Cafe Solar Cleaning</p>
+</footer>
+</body>
+</html>

@@ -1,1 +1,193 @@
-placeholder
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tony's Web Design — Your Business Online Fast</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --black:#0D0D0D;--panel:#1A1A1A;--card:#222222;--cream:#F5F0E8;
+  --brass:#C8A96E;--brass-dim:rgba(200,169,110,0.15);--grey:#8B8B8B;
+  --light:#BEBEBE;--rule:rgba(200,169,110,0.25);--red:#C8292B;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Lora',serif;color:var(--cream);background:var(--black);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(13,13,13,0.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule);padding:0 40px;height:60px;display:flex;align-items:center;justify-content:space-between}
+.nav-brand{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:0.12em;color:var(--cream);text-decoration:none}
+.nav-brand span{color:var(--brass)}
+.nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+.nav-links a{font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey);text-decoration:none;transition:color 0.2s}
+.nav-links a:hover{color:var(--brass)}
+.nav-cta{font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;background:var(--brass);color:var(--black);padding:8px 20px;text-decoration:none;transition:background 0.2s;white-space:nowrap}
+.nav-cta:hover{background:var(--cream)}
+.nav-ghost{font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--brass);border:1px solid var(--brass);padding:8px 16px;text-decoration:none;transition:all 0.2s;white-space:nowrap}
+.nav-ghost:hover{background:var(--brass);color:var(--black)}
+footer{background:var(--panel);padding:24px 40px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-brand{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:0.1em;color:var(--cream)}
+.footer-brand span{color:var(--brass)}
+.footer-links{display:flex;gap:24px;flex-wrap:wrap}
+.footer-links a{font-family:'Inter',sans-serif;font-size:11px;color:var(--grey);text-decoration:none;transition:color 0.2s}
+.footer-links a:hover{color:var(--brass)}
+.footer-copy{font-family:'Inter',sans-serif;font-size:11px;color:var(--grey)}
+.form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+.form-label{font-family:'Inter',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--brass)}
+.form-input,.form-select,.form-textarea{background:var(--card);border:1px solid rgba(245,240,232,0.1);color:var(--cream);font-family:'Inter',sans-serif;font-size:14px;font-weight:300;padding:12px 16px;outline:none;transition:border-color 0.2s;-webkit-appearance:none;width:100%}
+.form-input::placeholder,.form-textarea::placeholder{color:var(--grey)}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--brass)}
+.form-select option{background:var(--card)}
+.form-textarea{resize:vertical;min-height:100px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.btn-primary{font-family:'Inter',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;background:var(--brass);color:var(--black);border:none;padding:14px 32px;cursor:pointer;transition:background 0.2s;text-decoration:none;display:inline-block}
+.btn-primary:hover{background:var(--cream)}
+.btn-ghost-btn{font-family:'Inter',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--cream);border:1px solid rgba(245,240,232,0.3);padding:14px 32px;text-decoration:none;transition:all 0.2s;display:inline-block}
+.btn-ghost-btn:hover{border-color:var(--brass);color:var(--brass)}
+.section-stamp{font-family:'Inter',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.3em;text-transform:uppercase;color:var(--brass);margin-bottom:16px;display:flex;align-items:center;gap:12px}
+.section-stamp::before{content:'////';letter-spacing:0.1em;opacity:0.6}
+.section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,6vw,80px);letter-spacing:0.06em;color:var(--cream);line-height:1;margin-bottom:16px}
+.brass-rule{width:48px;height:2px;background:var(--brass);margin-bottom:48px}
+.highlight-box{background:var(--panel);border-left:3px solid var(--brass);padding:20px 24px;margin:20px 0}
+.highlight-box p{font-family:'Inter',sans-serif;font-size:14px;font-weight:300;line-height:1.75;color:var(--light);margin:0}
+@media(max-width:900px){
+  nav{padding:0 20px}
+  .nav-links{display:none}
+  footer{flex-direction:column;text-align:center;padding:20px}
+  .footer-links{justify-content:center}
+  .form-row{grid-template-columns:1fr}
+}
+
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:80px 40px 80px;position:relative;background:var(--black);overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,#0D0D0D 0%,#0a0d1a 50%,#0D0D0D 100%)}
+.hero-grid-lines{position:absolute;inset:0;background-image:linear-gradient(rgba(200,169,110,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(200,169,110,0.04) 1px,transparent 1px);background-size:60px 60px}
+.hero-content{position:relative;z-index:1;max-width:800px}
+.hero-stamp{font-family:'Inter',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.3em;text-transform:uppercase;color:var(--brass);margin-bottom:20px;display:flex;align-items:center;gap:12px}
+.hero-stamp::before{content:'';display:block;width:32px;height:1px;background:var(--brass)}
+.hero-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(56px,9vw,120px);line-height:0.9;letter-spacing:0.04em;color:var(--cream);margin-bottom:32px}
+.hero-title em{color:var(--brass);font-style:normal}
+.hero-sub{font-size:17px;font-weight:400;font-style:italic;line-height:1.7;color:var(--light);max-width:560px;margin-bottom:48px}
+.content{max-width:900px;margin:0 auto;padding:80px 40px}
+.pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin:48px 0}
+.pricing-card{background:var(--panel);padding:40px 36px;position:relative}
+.pricing-card.featured{background:var(--card);border-top:3px solid var(--brass)}
+.pricing-badge{font-family:'Inter',sans-serif;font-size:9px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--black);background:var(--brass);padding:4px 10px;display:inline-block;margin-bottom:20px}
+.pricing-name{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:0.08em;color:var(--cream);margin-bottom:8px}
+.pricing-price{font-family:'Bebas Neue',sans-serif;font-size:56px;color:var(--brass);line-height:1;margin-bottom:4px}
+.pricing-period{font-family:'Inter',sans-serif;font-size:12px;color:var(--grey);margin-bottom:24px}
+.pricing-features{list-style:none;padding:0;margin:0 0 32px}
+.pricing-features li{font-family:'Inter',sans-serif;font-size:13px;font-weight:300;color:var(--light);padding:8px 0;border-bottom:1px solid var(--rule);padding-left:20px;position:relative}
+.pricing-features li::before{content:'✓';position:absolute;left:0;color:var(--brass)}
+.what-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;margin:48px 0}
+.what-item{background:var(--panel);padding:32px 28px}
+.what-icon{font-size:32px;margin-bottom:16px}
+.what-title{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:0.06em;color:var(--cream);margin-bottom:10px}
+.what-desc{font-family:'Inter',sans-serif;font-size:13px;font-weight:300;line-height:1.7;color:var(--grey)}
+.enquiry-form{background:var(--panel);padding:48px;margin-top:48px}
+.form-submit{font-family:'Inter',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;background:var(--brass);color:var(--black);border:none;padding:16px 32px;cursor:pointer;transition:background 0.2s;width:100%}
+.form-submit:hover{background:var(--cream)}
+@media(max-width:900px){
+  .hero{padding:80px 20px 60px}
+  .content{padding:60px 20px}
+  .pricing-grid,.what-grid{grid-template-columns:1fr}
+  .enquiry-form{padding:28px 20px}
+}
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-brand">TONY'S <span>CAFE</span></a>
+  <ul class="nav-links"><li><a href="#enquire">Get Started</a></li></ul><div style="display:flex;gap:8px"><a href="/" class="nav-ghost">← Tony's Cafe</a><a href="#enquire" class="nav-cta">Start Project</a></div>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid-lines"></div>
+  <div class="hero-content">
+    <p class="hero-stamp">AI-Assisted Web Design for Small Business</p>
+    <h1 class="hero-title">YOUR STORY.<br>OUR <em>CODE</em>.<br>ONLINE FAST.</h1>
+    <p class="hero-sub">Describe your business. We build and host your website — professionally designed, mobile-ready and live within 48 hours. No tech knowledge needed.</p>
+    <a href="#enquire" class="btn-primary">Start Your Project</a>
+  </div>
+</section>
+
+<div class="content">
+  <p class="section-stamp">How It Works</p>
+  <h2 class="section-title">THREE STEPS TO ONLINE</h2>
+  <div class="brass-rule"></div>
+  <div class="what-grid">
+    <div class="what-item"><div class="what-icon">💬</div><h3 class="what-title">Tell Us Your Story</h3><p class="what-desc">Fill in our brief — describe your business, your customers, your vibe. The more you tell us, the better the site. No tech jargon required.</p></div>
+    <div class="what-item"><div class="what-icon">🤖</div><h3 class="what-title">We Build It</h3><p class="what-desc">Using AI-assisted design and our own build process, we create a professional website tailored to your business. You review and approve.</p></div>
+    <div class="what-item"><div class="what-icon">🚀</div><h3 class="what-title">You Go Live</h3><p class="what-desc">We host and deploy your site. Within 48 hours of approval you're live — with your own domain, your own brand, and your own corner of the internet.</p></div>
+  </div>
+
+  <p class="section-stamp">Pricing</p>
+  <h2 class="section-title">SIMPLE PRICING</h2>
+  <div class="brass-rule"></div>
+  <div class="pricing-grid">
+    <div class="pricing-card">
+      <div class="pricing-name">Once-Off Build</div>
+      <div class="pricing-price">R5,000</div>
+      <div class="pricing-period">Once-off — you own it</div>
+      <ul class="pricing-features">
+        <li>Professional website built to your brief</li>
+        <li>Mobile-responsive design</li>
+        <li>Contact or quote form</li>
+        <li>Hosted free on Vercel</li>
+        <li>One round of revisions included</li>
+        <li>Source files handed over</li>
+        <li>You manage it from here</li>
+      </ul>
+      <a href="#enquire" class="btn-ghost-btn" style="width:100%;text-align:center">Get Started</a>
+    </div>
+    <div class="pricing-card featured">
+      <span class="pricing-badge">Most Popular</span>
+      <div class="pricing-name">Monthly Plan</div>
+      <div class="pricing-price">R499</div>
+      <div class="pricing-period">per month — cancel anytime</div>
+      <ul class="pricing-features">
+        <li>Everything in Once-Off</li>
+        <li>Hosting included</li>
+        <li>Ongoing changes &amp; updates</li>
+        <li>Priority support</li>
+        <li>PayFast payment integration</li>
+        <li>Quote form &amp; email routing</li>
+        <li>We maintain it — you focus on your business</li>
+      </ul>
+      <a href="#enquire" class="btn-primary" style="width:100%;text-align:center;display:block">Get Started</a>
+    </div>
+  </div>
+
+  <p class="section-stamp">Get In Touch</p>
+  <h2 class="section-title">START YOUR PROJECT</h2>
+  <div class="brass-rule"></div>
+  <div class="enquiry-form" id="enquire">
+    <form action="https://formspree.io/f/xpqekkdk" method="POST">
+      <input type="hidden" name="_subject" value="Web Design Enquiry">
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Your Name</label><input type="text" name="name" class="form-input" placeholder="Full name" required></div>
+        <div class="form-group"><label class="form-label">Phone</label><input type="tel" name="phone" class="form-input" placeholder="082 000 0000"></div>
+      </div>
+      <div class="form-group"><label class="form-label">Email</label><input type="email" name="email" class="form-input" placeholder="your@email.com" required></div>
+      <div class="form-group"><label class="form-label">Your Business / Side Hustle</label><input type="text" name="business" class="form-input" placeholder="e.g. Plumber, Cake Baker, Personal Trainer..." required></div>
+      <div class="form-group"><label class="form-label">Preferred Plan</label>
+        <select name="plan" class="form-select form-input">
+          <option value="">Select a plan</option>
+          <option>Once-Off — R5,000</option>
+          <option>Monthly — R499/month</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
+      <div class="form-group"><label class="form-label">Tell Us About Your Business</label><textarea name="brief" class="form-textarea" style="min-height:140px" placeholder="What do you do? Who are your customers? What do you want your website to achieve? The more you tell us the better..." required></textarea></div>
+      <button type="submit" class="form-submit">Send My Brief</button>
+    </form>
+  </div>
+</div>
+<footer>
+  <span class="footer-brand">TONY'S <span>CAFE</span></span>
+  <div class="footer-links"><a href="/">Tony's Cafe</a><a href="/cafe.html">Cafe Racers</a><a href="/solar.html">Solar Cleaning</a><a href="/repair.html">Home Repairs</a><a href="/terms.html">Terms</a></div>
+  <p class="footer-copy">&copy; 2026 Tony's Cafe Web Design</p>
+</footer>
+</body>
+</html>

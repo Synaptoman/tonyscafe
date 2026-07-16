@@ -1,1 +1,230 @@
-placeholder
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tony's Home Repairs — Coming Soon | Register as a Contractor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --black:#0D0D0D;--panel:#1A1A1A;--card:#222222;--cream:#F5F0E8;
+  --brass:#C8A96E;--brass-dim:rgba(200,169,110,0.15);--grey:#8B8B8B;
+  --light:#BEBEBE;--rule:rgba(200,169,110,0.25);--red:#C8292B;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Lora',serif;color:var(--cream);background:var(--black);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(13,13,13,0.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule);padding:0 40px;height:60px;display:flex;align-items:center;justify-content:space-between}
+.nav-brand{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:0.12em;color:var(--cream);text-decoration:none}
+.nav-brand span{color:var(--brass)}
+.nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+.nav-links a{font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey);text-decoration:none;transition:color 0.2s}
+.nav-links a:hover{color:var(--brass)}
+.nav-cta{font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;background:var(--brass);color:var(--black);padding:8px 20px;text-decoration:none;transition:background 0.2s;white-space:nowrap}
+.nav-cta:hover{background:var(--cream)}
+.nav-ghost{font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--brass);border:1px solid var(--brass);padding:8px 16px;text-decoration:none;transition:all 0.2s;white-space:nowrap}
+.nav-ghost:hover{background:var(--brass);color:var(--black)}
+footer{background:var(--panel);padding:24px 40px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-brand{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:0.1em;color:var(--cream)}
+.footer-brand span{color:var(--brass)}
+.footer-links{display:flex;gap:24px;flex-wrap:wrap}
+.footer-links a{font-family:'Inter',sans-serif;font-size:11px;color:var(--grey);text-decoration:none;transition:color 0.2s}
+.footer-links a:hover{color:var(--brass)}
+.footer-copy{font-family:'Inter',sans-serif;font-size:11px;color:var(--grey)}
+.form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+.form-label{font-family:'Inter',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--brass)}
+.form-input,.form-select,.form-textarea{background:var(--card);border:1px solid rgba(245,240,232,0.1);color:var(--cream);font-family:'Inter',sans-serif;font-size:14px;font-weight:300;padding:12px 16px;outline:none;transition:border-color 0.2s;-webkit-appearance:none;width:100%}
+.form-input::placeholder,.form-textarea::placeholder{color:var(--grey)}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--brass)}
+.form-select option{background:var(--card)}
+.form-textarea{resize:vertical;min-height:100px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.btn-primary{font-family:'Inter',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;background:var(--brass);color:var(--black);border:none;padding:14px 32px;cursor:pointer;transition:background 0.2s;text-decoration:none;display:inline-block}
+.btn-primary:hover{background:var(--cream)}
+.btn-ghost-btn{font-family:'Inter',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--cream);border:1px solid rgba(245,240,232,0.3);padding:14px 32px;text-decoration:none;transition:all 0.2s;display:inline-block}
+.btn-ghost-btn:hover{border-color:var(--brass);color:var(--brass)}
+.section-stamp{font-family:'Inter',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.3em;text-transform:uppercase;color:var(--brass);margin-bottom:16px;display:flex;align-items:center;gap:12px}
+.section-stamp::before{content:'////';letter-spacing:0.1em;opacity:0.6}
+.section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,6vw,80px);letter-spacing:0.06em;color:var(--cream);line-height:1;margin-bottom:16px}
+.brass-rule{width:48px;height:2px;background:var(--brass);margin-bottom:48px}
+.highlight-box{background:var(--panel);border-left:3px solid var(--brass);padding:20px 24px;margin:20px 0}
+.highlight-box p{font-family:'Inter',sans-serif;font-size:14px;font-weight:300;line-height:1.75;color:var(--light);margin:0}
+@media(max-width:900px){
+  nav{padding:0 20px}
+  .nav-links{display:none}
+  footer{flex-direction:column;text-align:center;padding:20px}
+  .footer-links{justify-content:center}
+  .form-row{grid-template-columns:1fr}
+}
+
+.hero{min-height:70vh;display:flex;flex-direction:column;justify-content:flex-end;padding:80px 40px 80px;position:relative;background:var(--black);overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,#0D0D0D 0%,#1a0d0d 50%,#0D0D0D 100%)}
+.hero-stripe{position:absolute;inset:0;background:repeating-linear-gradient(60deg,transparent,transparent 6px,rgba(200,169,110,0.03) 6px,rgba(200,169,110,0.03) 7px);pointer-events:none}
+.hero-content{position:relative;z-index:1;max-width:800px}
+.hero-stamp{font-family:'Inter',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.3em;text-transform:uppercase;color:var(--brass);margin-bottom:20px;display:flex;align-items:center;gap:12px}
+.hero-stamp::before{content:'';display:block;width:32px;height:1px;background:var(--brass)}
+.hero-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(56px,9vw,120px);line-height:0.9;letter-spacing:0.04em;color:var(--cream);margin-bottom:32px}
+.hero-title em{color:var(--brass);font-style:normal}
+.hero-sub{font-size:17px;font-weight:400;font-style:italic;line-height:1.7;color:var(--light);max-width:560px;margin-bottom:16px}
+.coming-badge{display:inline-block;background:var(--brass);color:var(--black);font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;padding:8px 20px;margin-bottom:32px}
+.concept{background:var(--panel);padding:80px 40px;border-top:1px solid var(--rule)}
+.trades-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin:40px 0}
+.trade-item{background:var(--card);padding:24px;text-align:center}
+.trade-icon{font-size:32px;margin-bottom:10px}
+.trade-name{font-family:'Inter',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--light)}
+.signup-section{background:var(--black);padding:80px 40px;border-top:1px solid var(--rule)}
+.signup-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;margin-top:48px}
+.signup-intro p{font-family:'Inter',sans-serif;font-size:15px;font-weight:300;line-height:1.85;color:var(--light);margin-bottom:16px}
+.signup-intro ul{list-style:none;padding:0;margin:0}
+.signup-intro ul li{font-family:'Inter',sans-serif;font-size:13px;font-weight:300;color:var(--grey);padding-left:20px;position:relative;margin-bottom:10px;line-height:1.6}
+.signup-intro ul li::before{content:'///';position:absolute;left:0;color:var(--brass);font-size:10px;top:2px}
+.form-submit{font-family:'Inter',sans-serif;font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;background:var(--brass);color:var(--black);border:none;padding:16px 32px;cursor:pointer;transition:background 0.2s;width:100%}
+.form-submit:hover{background:var(--cream)}
+.checkbox-group{display:flex;flex-direction:column;gap:8px}
+.checkbox-item{display:flex;align-items:center;gap:10px;font-family:'Inter',sans-serif;font-size:13px;font-weight:300;color:var(--light)}
+.checkbox-item input[type=checkbox]{accent-color:var(--brass)}
+@media(max-width:900px){
+  .hero{padding:80px 20px 60px}
+  .concept,.signup-section{padding:60px 20px}
+  .trades-grid{grid-template-columns:1fr 1fr}
+  .signup-grid{grid-template-columns:1fr;gap:40px}
+}
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-brand">TONY'S <span>CAFE</span></a>
+  <ul class="nav-links"><li><a href="#concept">The Concept</a></li><li><a href="#signup">Register</a></li></ul><div style="display:flex;gap:8px"><a href="/" class="nav-ghost">← Tony's Cafe</a><a href="#signup" class="nav-cta">Register Now</a></div>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-stripe"></div>
+  <div class="hero-content">
+    <p class="hero-stamp">Emergency Home Repairs &mdash; Cape Town</p>
+    <h1 class="hero-title">BROKEN.<br><em>FIXED</em>.<br>FAST.</h1>
+    <p class="hero-sub">24/7 emergency home repair callouts. Location-based, Uber-style — first contractor to respond gets the job. Electricians, plumbers, solar, security and more.</p>
+    <span class="coming-badge">⚙️ Coming Soon — Contractors Register Below</span>
+    <br>
+    <a href="#signup" class="btn-primary">Register as a Contractor</a>
+  </div>
+</section>
+
+<section class="concept" id="concept">
+  <p class="section-stamp">The Concept</p>
+  <h2 class="section-title">HOW IT WILL WORK</h2>
+  <div class="brass-rule"></div>
+  <p style="font-family:Inter,sans-serif;font-size:15px;font-weight:300;line-height:1.85;color:var(--light);max-width:680px;margin-bottom:40px">A homeowner logs an emergency — burst pipe, tripped breaker, broken gate motor — and our platform alerts the nearest available contractors in their area. First one to accept gets the job. Simple, fast, local.</p>
+  <div class="trades-grid">
+    <div class="trade-item"><div class="trade-icon">⚡</div><div class="trade-name">Electrician</div></div>
+    <div class="trade-item"><div class="trade-icon">🔧</div><div class="trade-name">Plumber</div></div>
+    <div class="trade-item"><div class="trade-icon">☀️</div><div class="trade-name">Solar</div></div>
+    <div class="trade-item"><div class="trade-icon">🔒</div><div class="trade-name">Security</div></div>
+    <div class="trade-item"><div class="trade-icon">🏊</div><div class="trade-name">Pool</div></div>
+    <div class="trade-item"><div class="trade-icon">🌿</div><div class="trade-name">Lawn &amp; Garden</div></div>
+    <div class="trade-item"><div class="trade-icon">🏠</div><div class="trade-name">General Handyman</div></div>
+    <div class="trade-item"><div class="trade-icon">➕</div><div class="trade-name">More Coming</div></div>
+  </div>
+  <div class="highlight-box">
+    <p>We are building the contractor network first. Once we have sufficient coverage across Cape Town, we will launch the homeowner-facing platform. <strong>Register now to secure your spot.</strong></p>
+  </div>
+</section>
+
+<section class="signup-section" id="signup">
+  <p class="section-stamp">Contractors</p>
+  <h2 class="section-title">REGISTER NOW &mdash; FREE</h2>
+  <div class="brass-rule"></div>
+  <div class="signup-grid">
+    <div class="signup-intro">
+      <p>We are building our contractor network ahead of the platform launch. Registration is <strong>free</strong> and takes 5 minutes. Early registrants get priority placement when the platform goes live.</p>
+      <ul>
+        <li>Free to register — no subscription</li>
+        <li>You set your own area and availability</li>
+        <li>First to respond gets the job — no bidding</li>
+        <li>Platform launching Cape Town first</li>
+        <li>We contact you before launch with full details</li>
+        <li>Qualified trades only — certification required</li>
+      </ul>
+      <div class="highlight-box" style="margin-top:28px">
+        <p><strong>Certification:</strong> Please email a copy of your trade certification or registration to <strong style="color:var(--brass)">contractors@tonyscafe.co.za</strong> after submitting this form, with your name as the subject line.</p>
+      </div>
+    </div>
+    <div>
+      <form action="https://formspree.io/f/xpqekkdk" method="POST">
+        <input type="hidden" name="_subject" value="Home Repairs Contractor Registration">
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">Full Name</label><input type="text" name="full_name" class="form-input" placeholder="First &amp; Last name" required></div>
+          <div class="form-group"><label class="form-label">Trading Name</label><input type="text" name="trading_name" class="form-input" placeholder="Business / trading name"></div>
+        </div>
+        <div class="form-group"><label class="form-label">Email</label><input type="email" name="email" class="form-input" placeholder="your@email.com" required></div>
+        <div class="form-group"><label class="form-label">Phone</label><input type="tel" name="phone" class="form-input" placeholder="082 000 0000" required></div>
+        <div class="form-group"><label class="form-label">Trade / Service</label>
+          <select name="trade" class="form-select form-input" required>
+            <option value="">Select your trade</option>
+            <option>Electrician</option>
+            <option>Plumber</option>
+            <option>Solar Installer / Technician</option>
+            <option>Security Systems</option>
+            <option>Pool &amp; Pump</option>
+            <option>Lawn &amp; Garden</option>
+            <option>General Handyman</option>
+            <option>Painter</option>
+            <option>Tiler / Flooring</option>
+            <option>Roofing</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">Base Area / Suburb</label><input type="text" name="base_area" class="form-input" placeholder="e.g. Claremont, Cape Town" required></div>
+          <div class="form-group"><label class="form-label">Travel Radius (km)</label>
+            <select name="radius" class="form-select form-input">
+              <option value="">Select radius</option>
+              <option>Up to 10km</option>
+              <option>Up to 20km</option>
+              <option>Up to 30km</option>
+              <option>Anywhere in Cape Town</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group"><label class="form-label">Years Experience</label>
+          <select name="experience" class="form-select form-input">
+            <option value="">Select</option>
+            <option>1–3 years</option>
+            <option>3–5 years</option>
+            <option>5–10 years</option>
+            <option>10+ years</option>
+          </select>
+        </div>
+        <div class="form-group"><label class="form-label">Availability</label>
+          <div class="checkbox-group">
+            <label class="checkbox-item"><input type="checkbox" name="avail_weekday" value="Weekdays office hours"> Weekdays — office hours (8am–5pm)</label>
+            <label class="checkbox-item"><input type="checkbox" name="avail_extended" value="Weekdays extended"> Weekdays — extended hours (6am–8pm)</label>
+            <label class="checkbox-item"><input type="checkbox" name="avail_saturday" value="Saturdays"> Saturdays</label>
+            <label class="checkbox-item"><input type="checkbox" name="avail_sunday" value="Sundays"> Sundays</label>
+            <label class="checkbox-item"><input type="checkbox" name="avail_247" value="24/7 emergency"> 24/7 emergency callouts</label>
+          </div>
+        </div>
+        <div class="form-group"><label class="form-label">Qualified? (Registered / Certified)</label>
+          <select name="qualified" class="form-select form-input" required>
+            <option value="">Select</option>
+            <option>Yes — fully qualified and registered</option>
+            <option>Yes — qualified, not formally registered</option>
+            <option>Experienced but not formally qualified</option>
+          </select>
+        </div>
+        <div class="form-group"><label class="form-label">Brief Description of Your Services</label><textarea name="description" class="form-textarea" placeholder="What do you specialise in? Any specific skills, equipment or experience worth mentioning..."></textarea></div>
+        <button type="submit" class="form-submit">Register as a Contractor</button>
+        <p style="font-family:Inter,sans-serif;font-size:11px;color:var(--grey);text-align:center;margin-top:8px">Free registration. We will be in touch before launch.</p>
+      </form>
+    </div>
+  </div>
+</section>
+<footer>
+  <span class="footer-brand">TONY'S <span>CAFE</span></span>
+  <div class="footer-links"><a href="/">Tony's Cafe</a><a href="/cafe.html">Cafe Racers</a><a href="/solar.html">Solar Cleaning</a><a href="/webdesign.html">Web Design</a><a href="/terms.html">Terms</a></div>
+  <p class="footer-copy">&copy; 2026 Tony's Home Repairs &mdash; Coming Soon</p>
+</footer>
+</body>
+</html>
